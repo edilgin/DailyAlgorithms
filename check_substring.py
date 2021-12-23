@@ -13,10 +13,9 @@ def isSubsequence(s, t):
             idx_t += 1
         elif s[idx_s] != t[idx_t]:
             idx_t += 1
-        if idx_s == len(s):
-            return True
-        elif idx_s < len(s) and idx_t == len(t):
-            return False
+        if idx_t == len(t):
+            break
+    return idx_s == len(s)
 
 flag = isSubsequence("abc","ahbgdc")
 print("is substring:", flag)
